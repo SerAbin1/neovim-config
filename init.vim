@@ -50,3 +50,8 @@ set shiftwidth=4
 set expandtab
 filetype plugin indent on
 
+
+" Customize completion menu appearance
+highlight CocMenuSel guibg=#5e81ac guifg=#ffffff " Selected completion item (highlighted in blue with white text)
+highlight CocMenu guibg=#2e3440 guifg=#d8dee9 " Background of the completion menu (dark with light text)
+highlight CocPumHighlight guibg=#3b4252 guifg=#88c0d0 " Popup menu highlight (light blue text on dark background)
