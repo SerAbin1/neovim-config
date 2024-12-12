@@ -1,0 +1,7 @@
+{
+  "diagnostic.enable": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.signOffset": 2,
+  "diagnostic.displayByAle": false,
+  "snippets.enable": false
+}
