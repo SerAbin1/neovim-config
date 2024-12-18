@@ -9,12 +9,17 @@ return {
       vim.cmd [[
         " Global extensions for coc.nvim (install html and css)
         let g:coc_global_extensions = ['coc-html', 'coc-css']
-        " Arrow keys for navigation
-        inoremap <silent><expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
-        inoremap <silent><expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
+        " Tab for navigating through completion menu (forward)
+        inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
-        " Enter does nothing when popup menu is visible
+        " Shift+Tab for navigating through completion menu (backward)
+        inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+        " Enter for confirming the completion
         inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+
+        " Ensuring completion popup behavior works smoothly
+        set completeopt=menuone,noinsert,noselect
       ]]
     end
   }

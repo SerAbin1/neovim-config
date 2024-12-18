@@ -38,6 +38,11 @@ return {
         }, {
           { name = "buffer" },
         }),
+        -- Disable cmp for HTML and CSS filetypes
+        enabled = function()
+          local filetype = vim.bo.filetype
+          return filetype ~= "html" and filetype ~= "css"
+        end,
       })
     end,
   },
